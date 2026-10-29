@@ -1,0 +1,38 @@
+[
+  {
+    "name": "search_sequence",
+    "description": "Search the OEIS (On-Line Encyclopedia of Integer Sequences), the authoritative database of integer sequences. Identify a sequence from its first terms by passing a comma-separated list of integers (e.g. \"1,1,2,3,5,8\" finds the Fibonacci numbers), look up a specific sequence by A-number (e.g. \"A000045\"), or search free-text keywords (e.g. \"prime gaps\"). Returns up to 10 matching sequences per page with their A-number, name, terms, keywords, author, and offset. Use the start argument to paginate (10 results at a time).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "A comma-separated list of integers (e.g. \"1,1,2,3,5,8\"), an A-number (e.g. \"A000045\"), or free-text keywords (e.g. \"prime gaps\")."
+        },
+        "start": {
+          "type": "number",
+          "description": "Pagination offset; results come 10 at a time. Default 0."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_sequence",
+    "description": "Fetch a single OEIS integer sequence by its A-number (e.g. \"A000045\" for the Fibonacci numbers, \"A000040\" for the primes). Accepts the A-number with or without the \"A\" prefix and zero-padding (\"A000045\", \"45\", and \"000045\" are all valid). Returns the full record: name, terms (data), comments, formulas, keywords, offset, author, and reference count. Use this to get the formula or mathematical description of a known sequence.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "An OEIS A-number such as \"A000045\", or just \"45\" / \"000045\"."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
