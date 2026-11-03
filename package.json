@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-oeis",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "OEIS (On-Line Encyclopedia of Integer Sequences) MCP. Authoritative database of integer sequences. Identify a sequence from its first terms, look up well-known sequences (Fibonacci, primes, etc.) by A-number, and retrieve formulas, comments, and metadata.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "oeis",
     "gatewaySlug": "oeis",
-    "sourceHash": "v1-091a88356ee499fcc3bf8a1c459fd5618bf9aa40c40f4d8bf23f8c89486d1c40",
-    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
+    "sourceHash": "v1-7ec168eaac9c99ef3f479dd336b2cb34a9b12417c24738df04cba38f5be9e04d",
+    "sourceCommit": "bed7faa04e7276899b5e3870ef11c98625371f2b"
   }
 }
